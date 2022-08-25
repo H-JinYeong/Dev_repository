@@ -1,0 +1,125 @@
+body {
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: left;
+    margin-left: 50px;
+    width: calc(100vw - 50px);
+    height: 70px;
+}
+
+.main-header {
+    text-align: left;
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-mini {
+    position: absolute;
+    left: 0%;
+    top: 70px;
+    width: 50px;
+    height: calc(100% - 70px);
+    min-height: 500px;
+    background-color: white;
+    z-index: 3;
+}
+
+.main-mini-item {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.main-mini-a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.main-menu {
+    position: absolute;
+    left: 0%;
+    top: 70px;
+    width: 200px;
+    height: calc(100% - 70px);
+    min-height: 500px;
+    margin-left: 50px;
+    background-color: #424242;
+    opacity: 0.9;
+    transform: translateX(-100%);
+    transition: 0.7s ease-in-out;
+    z-index: 2;
+}
+
+.main-menu-item {
+    width: 100%;
+    height: 50px;
+    background-color: #424242;
+}
+
+.main-menu-item-a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 45px;
+}
+.main-menu-item-a svg {
+    position: relative;
+    top: 1px;
+}
+
+#main-menu-check {
+    position: fixed;
+    left: -1000px;
+    top: 20px;
+}
+
+.foo {
+    position: absolute;
+    font-size: 0.5rem;
+    line-height: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 8px 0px 0px 10px;
+    bottom: 0px;
+}
+
+#main-menu-check:checked ~ .main-menu {
+    /* #main-menu-check:checked 체크되었을 때 main-menu클래스 까지 */
+    background-color: #424242;
+    opacity: 0.9;
+    transform: translateX(0);
+}
+
+label[for='main-menu-check'] {  /* 라벨 선택 시 체크박스와 동일하게 */
+    /*메뉴 삼선*/
+    position: fixed;
+    left: 15px;
+    top: 22px;
+    z-index: 2;
+}
+
+.div-body {
+    display: flex;
+    height: calc(100% - 70px);
+    background-color: #eeeeee;
+}
+
+/* .div-body:nth-child(1) { flex-grow: 1; } */
+/* .div-body:nth-child(2) { flex-grow:3; } */
+/* .div-body:nth-child(3) { flex-grow: 1; } */
+
+.text-p {
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 100%;
+}
+
+
+
